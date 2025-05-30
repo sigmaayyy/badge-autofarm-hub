@@ -244,7 +244,7 @@ end
 })
 
 local BadgeButton = BadgeTab:CreateButton({
-   Name = "Get Buddies [Might Not Work]",
+   Name = "Get Buddies [Not Working]",
    Callback = function()
    if not game.IsLoaded then
 game.Loaded:Wait()
@@ -339,7 +339,7 @@ end
 })
 
 local BadgeButton = BadgeTab:CreateButton({
-   Name = "Get Glovel",
+   Name = "Get Glovel [Not Working]",
    Callback = function()
    if not game.IsLoaded then
 game.Loaded:Wait()
@@ -454,17 +454,13 @@ local CreditsParagraph = CreditsTab:CreateParagraph({Title = "Premium", Content 
 local CreditsButton = CreditsTab:CreateButton({
    Name = "Join Discord (Check Clipboard)",
    Callback = function()
-  local function setClipboardWithURL()
-    setclipboard("https://discord.gg/PfbeUhppbc")
-end
+  setclipboard("https://discord.gg/PfbeUhppbc")
    end,
 })
 
-local BadgeButton = BadgeTab:CreateButton({
+local CreditsButton = CreditsTab:CreateButton({
    Name = "Get Premium (Check Clipboard)",
    Callback = function()
-   local function setClipboardWithURL()
-    setclipboard("https://www.roblox.com/game-pass/1233739253/Premium")
-end
+setclipboard("https://www.roblox.com/game-pass/1233739253/Premium")
    end,
 })

@@ -309,7 +309,7 @@ end
 
 else
 game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Message from Nexer1234_AnotherAlt",
+	Title = "Message from Ninja",
 	Text = "Just equip zzzzzzzzzzzz dawg 😭",
     Icon = nil,
 	Duration = 36000,

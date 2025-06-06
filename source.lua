@@ -458,7 +458,7 @@ end
    end,
 })
 
-local BadgeButton = BadegeTab:CreateButton({
+local BadgeButton = BadgeTab:CreateButton({
    Name = "Get Bob [LIMITED]",
    Callback = function()
    if not game.IsLoaded then

@@ -419,7 +419,7 @@ end
 
  local userId = game.Players.LocalPlayer.UserId ----------------------------
 
-if userId == 5280006608 or userId == 8635080760 or userId == 3367685856 then
+if userId == 5280006608 or userId == 8635080760 or userId == 3367685856 or userId == 8296140670
     
  local BadgeButton = BadgeTab:CreateButton({
 Name = "Get Fish [PREMIUM]",

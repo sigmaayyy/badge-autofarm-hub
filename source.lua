@@ -332,10 +332,100 @@ end
 })
 
 local BadgeButton = BadgeTab:CreateButton({
-   Name = "Get Fish [LIMITED]",
+   Name = "🧀Get Mouse🧀",
    Callback = function()
-print("Getting Fish... Use in lobby!")		
+print("Getting Mouse")			
    if not game.IsLoaded then
+game.Loaded:Wait()
+end
+
+-- Credits, message is not squished up cuz it looks bad
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Credits to Ninja",
+	Text = "Made by @NinjaKid-k5q ( youtube & discord )",
+        Icon = nil,
+	Duration = 36000,
+	Button1 = "Thanks!"
+})
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Message from Ninja",
+	Text = "Please re-execute script after teleporting",
+    Icon = nil,
+	Duration = 36000,
+	Button1 = "Oh..."
+})
+
+
+if game.PlaceId == 97220865182663 then
+
+-- Starting game
+if workspace.Game.Buildings.City:FindFirstChild("City") == nil then
+game:GetService("ReplicatedStorage").Remotes.PlaceBuilding:FireServer("City", Vector3.new(3.125, 43.4450798034668, -57.1875), 0)
+end
+
+while task.wait(.003) do
+
+for i,v in pairs(workspace.Game.Enemies:GetChildren()) do
+if v.Name == "Rat" and v:FindFirstChild("Hitbox") and v:FindFirstChildWhichIsA("Humanoid") and v:FindFirstChildWhichIsA("Humanoid").Health ~= 0 then
+v.Hitbox.Anchored = true
+game:GetService("ReplicatedStorage").Remotes.GloveHit:FireServer(v.Hitbox)
+v:FindFirstChildWhichIsA("Humanoid").Health = 0
+end
+end
+
+-- If we get 3000 orbs it will automatically win
+game:GetService("ReplicatedStorage").Remotes.UnlockGloveWithOrbs:FireServer()
+end
+
+elseif game.PlaceId == 11520107397 or game.PlaceId == 9015014224 or game.PlaceId == 6403373529 or game.PlaceId == 124596094333302 then
+if game.Players.LocalPlayer.Character:FindFirstChild("entered") == nil then
+if game.Players.LocalPlayer.leaderstats.Slaps.Value >= 11500 then -- Checking for elgato
+fireclickdetector(workspace.Lobby["el gato"].ClickDetector) -- Equiping el gato
+repeat task.wait(.1) until game.Players.LocalPlayer.leaderstats.Glove.Value == "el gato"
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Lobby["Teleport1"].CFrame
+repeat task.wait(.1) until game.Players.LocalPlayer.Character:FindFirstChild("entered") -- Waiting for our character to get teleported to arena
+task.wait(.1)
+fireclickdetector(workspace.Cheese.ClickDetector) -- clicking this cheesy thing
+else
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Message from Ninja",
+	Text = "You don't have enough slaps",
+    Icon = nil,
+	Duration = 36000,
+	Button1 = "Oh..."
+})
+end
+else
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Message from Ninja",
+	Text = "Use in lobby",
+    Icon = nil,
+	Duration = 36000,
+	Button1 = "Oh..."
+})
+end
+else
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Message from Ninja",
+	Text = "Wrong game buddy",
+    Icon = nil,
+	Duration = 36000,
+	Button1 = "Oh..."
+})
+end
+   end,
+})
+
+ local userId = game.Players.LocalPlayer.UserId ----------------------------
+
+if userId == 5280006608 or userId == 8635080760 then
+    
+ local BadgeButton = BadgeTab:CreateButton({
+Name = "Get Fish [PREMIUM]",
+Callback = function()
+print("Getting Fish... Use in lobby!")        
+if not game.IsLoaded then
 game.Loaded:Wait()
 end
 
@@ -454,10 +544,64 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 	Duration = 36000,
 	Button1 = "Oh..."
 })
+        end
+
+                
+            end
+   
+        })
+    
+
+    local BadgeButton = BadgeTab:CreateButton({
+   Name = "Get Bind [PREMIUM]",
+   Callback = function()
+    print("Getting Bind... Thanks for buying premium! Make sure to re-execute after teleporting.")            
+   if not game.IsLoaded then
+game.Loaded:Wait()
+end
+
+-- Credits, message is not squished up cuz it looks bad
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Credits to Ninja",
+	Text = "Made by @NinjaKid-k5q ( youtube & discord )",
+        Icon = nil,
+	Duration = 36000,
+	Button1 = "Thanks!"
+})
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Message from Ninja",
+	Text = "Please re-execute script after teleporting",
+    Icon = nil,
+	Duration = 36000,
+	Button1 = "Oh..."
+})
+
+
+if game.PlaceId == 74169485398268 then
+
+local time = tick()
+while tick() - time < 10 do task.wait() fireclickdetector(workspace.Orb:FindFirstChildWhichIsA("ClickDetector")) end
+while task.wait() do game:GetService("TeleportService"):Teleport(6403373529) end
+
+elseif game.PlaceId == 11520107397 or game.PlaceId == 9015014224 or game.PlaceId == 6403373529 or game.PlaceId == 124596094333302 then
+  
+while task.wait() do game:GetService("TeleportService"):Teleport(74169485398268) end
+
+else
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Message from Ninja",
+	Text = "Wrong game buddy",
+    Icon = nil,
+	Duration = 36000,
+	Button1 = "Oh..."
+})
 end
    end,
 })
 
+    
+else
 
 local CreditsTab = Window:CreateTab("Credits & Get Premium", 4483362458) -- Title, Image
 
@@ -469,6 +613,7 @@ local CreditsButton = CreditsTab:CreateButton({
   setclipboard("https://discord.gg/PfbeUhppbc")
    end,
 })
+    local CreditsParagraph = CreditsTab:CreateParagraph({Title = "Premium", Content = "There are hidden gloves you cannot get because you are lacking Premium."})
 
 local CreditsButton = CreditsTab:CreateButton({
    Name = "Get Premium (Check Clipboard)",
@@ -476,3 +621,4 @@ local CreditsButton = CreditsTab:CreateButton({
 setclipboard("https://www.roblox.com/game-pass/1233739253/Premium")
    end,
 })
+    end

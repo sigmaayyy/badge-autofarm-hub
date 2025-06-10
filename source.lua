@@ -332,10 +332,10 @@ end
 })
 
 local BadgeButton = BadgeTab:CreateButton({
-   Name = "🧀Get Mouse🧀",
+   Name = "🧊Get Frostbite🧊",
    Callback = function()
-print("Getting Mouse")			
-   if not game.IsLoaded then
+print("Getting Frostbite")			
+if not game.IsLoaded then
 game.Loaded:Wait()
 end
 
@@ -351,60 +351,36 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Message from Ninja",
 	Text = "Please re-execute script after teleporting",
-    Icon = nil,
+    Icon = nil",
 	Duration = 36000,
 	Button1 = "Oh..."
 })
 
 
-if game.PlaceId == 97220865182663 then
+if game.PlaceId == 17290438723 then
 
--- Starting game
-if workspace.Game.Buildings.City:FindFirstChild("City") == nil then
-game:GetService("ReplicatedStorage").Remotes.PlaceBuilding:FireServer("City", Vector3.new(3.125, 43.4450798034668, -57.1875), 0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-555, 180, 55)
+wait(1)
+for i,v in ipairs(workspace:GetDescendants()) do
+if v.ClassName == "ProximityPrompt" then
+if v.HoldDuration ~= 0 then
+v.HoldDuration = 0
 end
-
-while task.wait(.003) do
-
-for i,v in pairs(workspace.Game.Enemies:GetChildren()) do
-if v.Name == "Rat" and v:FindFirstChild("Hitbox") and v:FindFirstChildWhichIsA("Humanoid") and v:FindFirstChildWhichIsA("Humanoid").Health ~= 0 then
-v.Hitbox.Anchored = true
-game:GetService("ReplicatedStorage").Remotes.GloveHit:FireServer(v.Hitbox)
-v:FindFirstChildWhichIsA("Humanoid").Health = 0
+if v.RequiresLineOfSight ~= false then
+v.RequiresLineOfSight = false
+end
+if v.MaxActivationDistance ~= 9e9 then
+v.MaxActivationDistance = 9e9
+end
+v.Enabled = true
+fireproximityprompt(v)
 end
 end
-
--- If we get 3000 orbs it will automatically win
-game:GetService("ReplicatedStorage").Remotes.UnlockGloveWithOrbs:FireServer()
-end
-
+  
 elseif game.PlaceId == 11520107397 or game.PlaceId == 9015014224 or game.PlaceId == 6403373529 or game.PlaceId == 124596094333302 then
-if game.Players.LocalPlayer.Character:FindFirstChild("entered") == nil then
-if game.Players.LocalPlayer.leaderstats.Slaps.Value >= 11500 then -- Checking for elgato
-fireclickdetector(workspace.Lobby["el gato"].ClickDetector) -- Equiping el gato
-repeat task.wait(.1) until game.Players.LocalPlayer.leaderstats.Glove.Value == "el gato"
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Lobby["Teleport1"].CFrame
-repeat task.wait(.1) until game.Players.LocalPlayer.Character:FindFirstChild("entered") -- Waiting for our character to get teleported to arena
-task.wait(.1)
-fireclickdetector(workspace.Cheese.ClickDetector) -- clicking this cheesy thing
-else
-game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Message from Ninja",
-	Text = "You don't have enough slaps",
-    Icon = nil,
-	Duration = 36000,
-	Button1 = "Oh..."
-})
-end
-else
-game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Message from Ninja",
-	Text = "Use in lobby",
-    Icon = nil,
-	Duration = 36000,
-	Button1 = "Oh..."
-})
-end
+  
+while task.wait() do game:GetService("TeleportService"):Teleport(17290438723) end
+
 else
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Message from Ninja",
@@ -414,8 +390,15 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 	Button1 = "Oh..."
 })
 end
-   end,
-})
+
+
+
+
+
+
+
+
+
 
  local userId = game.Players.LocalPlayer.UserId ----------------------------
 
@@ -597,6 +580,13 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 	Button1 = "Oh..."
 })
 end
+   end,
+})
+	local Button = Tab:CreateButton({
+   Name = "Launch Premium GUI [Check Console For Token]",
+   Callback = function()
+	print("Your token is: TOKEN_9932049932406") 			
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/sigmaayyy/badge-hub-premium/refs/heads/main/premium.lua"))()
    end,
 })
 

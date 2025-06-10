@@ -582,7 +582,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 end
    end,
 })
-	local Button = Tab:CreateButton({
+	local BadgeButton = BadgeTab:CreateButton({
    Name = "Launch Premium GUI [Check Console For Token]",
    Callback = function()
 	print("Your token is: TOKEN_9932049932406") 			

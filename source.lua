@@ -400,7 +400,7 @@ end
 
 
 
- local userId = game.Players.LocalPlayer.UserId ----------------------------
+ local userId = game.Players.LocalPlayer.userId 
 
 if userId == 5280006608 or userId == 8635080760 or userId == 3367685856 or userId == 8296140670 then
     

@@ -611,6 +611,7 @@ end
    Callback = function()
 	print("Your token is: TOKEN_9932049932406") 			
    loadstring(game:HttpGet("https://raw.githubusercontent.com/sigmaayyy/badge-hub-premium/refs/heads/main/premium.lua"))()
+				Rayfield:Destroy()
    end,
 })
 else

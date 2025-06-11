@@ -1,4 +1,4 @@
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+  local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local ArsenalPlaceId = 6403373529 
 local StarterGui = game:GetService("StarterGui")
@@ -391,11 +391,44 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 })
 end
 
- local userId = game.Players.LocalPlayer.UserId 
+ 
+        end
 
-if userId == 5280006608 or userId == 8635080760 or userId == 3367685856 or userId == 8296140670 then
-    
- local BadgeButton = BadgeTab:CreateButton({
+
+
+
+    })
+
+local CreditsTab = Window:CreateTab("Credits & Get Premium", 4483362458) -- Title, Image
+
+local CreditsParagraph = CreditsTab:CreateParagraph({Title = "Premium", Content = "You are currently using the free version. Upgrade to premium to get more badges and autofarm slaps."})
+
+local CreditsButton = CreditsTab:CreateButton({
+   Name = "Join Discord (Check Clipboard)",
+   Callback = function()
+  setclipboard("https://discord.gg/PfbeUhppbc")
+   end,
+})
+    local CreditsParagraph = CreditsTab:CreateParagraph({Title = "Premium", Content = "There are hidden gloves you cannot get because you are lacking Premium."})
+
+local CreditsButton = CreditsTab:CreateButton({
+   Name = "Get Premium (Check Clipboard)",
+   Callback = function()
+setclipboard("https://www.roblox.com/game-pass/1233739253/Premium")
+   end,
+})
+
+local userId = game.Players.LocalPlayer.UserId
+local whitelistedIds = {
+    [5280006608] = true,
+    [8635080760] = true,
+    [3367685856] = true,
+    [8296140670] = true
+}
+
+if whitelistedIds[userId] then
+    print("Whitelisted user!")
+    local BadgeButton = BadgeTab:CreateButton({
 Name = "Get Fish [PREMIUM]",
 Callback = function()
 print("Getting Fish... Use in lobby!")        
@@ -580,27 +613,6 @@ end
    loadstring(game:HttpGet("https://raw.githubusercontent.com/sigmaayyy/badge-hub-premium/refs/heads/main/premium.lua"))()
    end,
 })
-
-    
 else
-
-local CreditsTab = Window:CreateTab("Credits & Get Premium", 4483362458) -- Title, Image
-
-local CreditsParagraph = CreditsTab:CreateParagraph({Title = "Premium", Content = "You are currently using the free version. Upgrade to premium to get more badges and autofarm slaps."})
-
-local CreditsButton = CreditsTab:CreateButton({
-   Name = "Join Discord (Check Clipboard)",
-   Callback = function()
-  setclipboard("https://discord.gg/PfbeUhppbc")
-   end,
-})
-    local CreditsParagraph = CreditsTab:CreateParagraph({Title = "Premium", Content = "There are hidden gloves you cannot get because you are lacking Premium."})
-
-local CreditsButton = CreditsTab:CreateButton({
-   Name = "Get Premium (Check Clipboard)",
-   Callback = function()
-setclipboard("https://www.roblox.com/game-pass/1233739253/Premium")
-   end,
-})
-    end
-        end})
+    print("Not whitelisted.")
+end

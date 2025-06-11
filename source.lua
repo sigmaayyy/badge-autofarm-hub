@@ -351,7 +351,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Message from Ninja",
 	Text = "Please re-execute script after teleporting",
-    Icon = nil",
+    Icon = nil,
 	Duration = 36000,
 	Button1 = "Oh..."
 })
@@ -402,7 +402,7 @@ end
 
  local userId = game.Players.LocalPlayer.UserId ----------------------------
 
-if userId == 5280006608 or userId == 8635080760 or userId == 3367685856 or userId == 8296140670
+if userId == 5280006608 or userId == 8635080760 or userId == 3367685856 or userId == 8296140670 then
     
  local BadgeButton = BadgeTab:CreateButton({
 Name = "Get Fish [PREMIUM]",
@@ -612,3 +612,4 @@ setclipboard("https://www.roblox.com/game-pass/1233739253/Premium")
    end,
 })
     end
+        end})

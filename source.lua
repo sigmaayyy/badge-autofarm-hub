@@ -391,16 +391,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 })
 end
 
-
-
-
-
-
-
-
-
-
- local userId = game.Players.LocalPlayer.userId 
+ local userId = game.Players.LocalPlayer.UserId 
 
 if userId == 5280006608 or userId == 8635080760 or userId == 3367685856 or userId == 8296140670 then
     

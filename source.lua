@@ -12,11 +12,11 @@ if game.PlaceId ~= ArsenalPlaceId then
 end
 
 local Window = Rayfield:CreateWindow({
-   Name = "Badge | Autofarm Hub",
+   Name = "Badge Hub",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Loading...",
-   LoadingSubtitle = "Downloading assests from folder  'slaphub' ",
-  Background = Color3.fromRGB(5, 110, 247),
+   LoadingSubtitle = "Downloading assests from folder...",
+   Theme = "Ocean",
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface

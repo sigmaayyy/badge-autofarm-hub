@@ -16,7 +16,7 @@ local Window = Rayfield:CreateWindow({
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Loading...",
    LoadingSubtitle = "Downloading assests from folder  'slaphub' ",
-   Theme = "Green", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+  Background = Color3.fromRGB(5, 110, 247),
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface

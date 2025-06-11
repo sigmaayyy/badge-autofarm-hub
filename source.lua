@@ -15,7 +15,7 @@ local Window = Rayfield:CreateWindow({
    Name = "Badge | Autofarm Hub",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Loading...",
-   LoadingSubtitle = "Downloading assests from folder  'slaphub' ",
+   LoadingSubtitle = "Downloading assests from fold ",
    Theme = "Green", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,

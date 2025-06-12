@@ -421,12 +421,18 @@ setclipboard("https://www.roblox.com/game-pass/1233739253/Premium")
 local userId = game.Players.LocalPlayer.UserId
 local whitelistedIds = {
     [5280006608] = true,
+    [8635080760] = true,
     [3367685856] = true,
     [8296140670] = true
 }
 
 if whitelistedIds[userId] then
-    print("Whitelisted user!")
+   Rayfield:Notify({
+   Title = "Whitelisted",
+   Content = "You have premium! Enjoy premium features.",
+   Duration = 6.5,
+   Image = 4483362458,
+})
     local BadgeButton = BadgeTab:CreateButton({
 Name = "Get Fish [PREMIUM]",
 Callback = function()
@@ -614,5 +620,10 @@ end
    end,
 })
 else
-    print("Not whitelisted.")
+    Rayfield:Notify({
+   Title = "Free Version",
+   Content = "You are not whitelisted. Upgrade to premium for more features!",
+   Duration = 6.5,
+   Image = 4483362458,
+})
 end

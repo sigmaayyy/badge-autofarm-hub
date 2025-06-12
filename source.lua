@@ -421,7 +421,6 @@ setclipboard("https://www.roblox.com/game-pass/1233739253/Premium")
 local userId = game.Players.LocalPlayer.UserId
 local whitelistedIds = {
     [5280006608] = true,
-    [8635080760] = true,
     [3367685856] = true,
     [8296140670] = true
 }

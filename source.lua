@@ -581,7 +581,8 @@ local whitelistedIds = {
     [5280006608] = true,
     [8635080760] = true,
     [3367685856] = true,
-    [8296140670] = true
+    [8296140670] = true,
+    [1582295626] = true
 }
 
 if whitelistedIds[userId] then

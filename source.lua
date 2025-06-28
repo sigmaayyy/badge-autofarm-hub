@@ -13,7 +13,7 @@ end
 
 local Window = Rayfield:CreateWindow({
    Name = "Syntax Exploits | v6.5",
-   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   Icon = code, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Loading...",
    LoadingSubtitle = "Downloading assests from folder...",
    Theme = "Ocean",
@@ -35,13 +35,13 @@ local Window = Rayfield:CreateWindow({
 
    KeySystem = false, -- Set this to true to use our key system
    KeySettings = {
-      Title = "Untitled",
-      Subtitle = "Key System",
+      Title = "Syntax Exploits | Key System",
+      Subtitle = "Epic Key System",
       Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+      Key = {"https://pastebin.com/raw/QwyupjGV"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
 
@@ -588,7 +588,7 @@ if game.PlaceId == 136005148166028 then
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Message from Ninja",
 	Text = "Please don't move and don't touch anything!",
-    Icon = nil,
+    Icon = x,
 	Duration = 36000,
 	Button1 = "All i want is my badge 😭"
 })
@@ -685,7 +685,7 @@ else
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Message from Ninja",
 	Text = "Wrong game buddy",
-    Icon = nil,
+    Icon = ban,
 	Duration = 36000,
 	Button1 = "Oh..."
 })
@@ -703,7 +703,7 @@ local CreditsButton = CreditsTab:CreateButton({
   setclipboard("https://discord.gg/PfbeUhppbc")
    end,
 })
-    local CreditsParagraph = CreditsTab:CreateParagraph({Title = "Premium", Content = "There are hidden gloves you cannot get because you are lacking Premium."})
+    local CreditsParagraph = CreditsTab:CreateParagraph({Title = "Premium", Content = "There are hidden gloves you cannot get because you are do not own Premium."})
 
 local CreditsButton = CreditsTab:CreateButton({
    Name = "Get Short-Time key (Check Clipboard)",
@@ -813,7 +813,7 @@ end
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Credits to Ninja",
 	Text = "Made by @NinjaKid-k5q ( youtube & discord )",
-        Icon = nil,
+        Icon = leaf,
 	Duration = 36000,
 	Button1 = "Thanks!"
 })
@@ -846,7 +846,7 @@ else
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Message from Ninja",
 	Text = "Wrong game buddy",
-    Icon = nil,
+    Icon = ban,
 	Duration = 36000,
 	Button1 = "Oh..."
 })
@@ -869,7 +869,7 @@ end
 -- Credits, message is not squished up cuz it looks bad
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Credits to Ninja",
-	Text = "Made by @NinjaKid-k5q ( youtube & discord )",
+	Text = "Made & developed by @NinjaKid-k5q ( youtube & discord )",
         Icon = nil,
 	Duration = 36000,
 	Button1 = "Thanks!"

@@ -13,7 +13,7 @@ end
 
 local Window = Rayfield:CreateWindow({
    Name = "Syntax Exploits | v6.5",
-   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   Icon = code, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Loading...",
    LoadingSubtitle = "Downloading assests from folder...",
    Theme = "Ocean",
@@ -62,7 +62,7 @@ end
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Credits to Ninja",
 	Text = "Made by @NinjaKid-k5q ( youtube & discord )",
-        Icon = nil,
+        Icon = venetian-mask,
 	Duration = 36000,
 	Button1 = "Thanks!"
 })

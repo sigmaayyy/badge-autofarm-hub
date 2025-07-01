@@ -12,7 +12,7 @@ if game.PlaceId ~= ArsenalPlaceId then
 end
 
 local Window = Rayfield:CreateWindow({
-   Name = "Syntax Exploits | v6.5",
+   Name = "Syntax Exploits | v7.0",
    Icon = Bloom, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Loading...",
    LoadingSubtitle = "Downloading assests from folder...",

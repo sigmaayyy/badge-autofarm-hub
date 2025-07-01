@@ -13,7 +13,7 @@ end
 
 local Window = Rayfield:CreateWindow({
    Name = "Syntax Exploits | v6.5",
-   Icon = code, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   Icon = Bloom, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Loading...",
    LoadingSubtitle = "Downloading assests from folder...",
    Theme = "Ocean",

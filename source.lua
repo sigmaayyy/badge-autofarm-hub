@@ -1,4 +1,4 @@
-  local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local ArsenalPlaceId = 6403373529 
 local StarterGui = game:GetService("StarterGui")

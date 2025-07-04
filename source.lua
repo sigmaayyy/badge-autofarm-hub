@@ -1,3 +1,4 @@
+
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local ArsenalPlaceId = 6403373529 
@@ -12,11 +13,11 @@ if game.PlaceId ~= ArsenalPlaceId then
 end
 
 local Window = Rayfield:CreateWindow({
-   Name = "Syntax Exploits | v7.0",
-   Icon = Bloom, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   Name = "Syntax Exploits | v7.5",
+   Icon = "0", -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Loading...",
-   LoadingSubtitle = "Downloading assests from folder...",
-   Theme = "Ocean",
+   LoadingSubtitle = "Downloading assests...",
+   Theme = "Amethyst",
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
@@ -60,7 +61,7 @@ end
 
 -- Credits, message is not squished up cuz it looks bad
 game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Credits to Ninja",
+	Title = "Credits to Syntax",
 	Text = "Made by @NinjaKid-k5q ( youtube & discord )",
         Icon = nil,
 	Duration = 36000,
@@ -68,7 +69,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 })
 
 game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Message from Ninja",
+	Title = "Message from Syntax",
 	Text = "Please re-execute script after teleporting",
     Icon = nil,
 	Duration = 36000,
@@ -140,7 +141,7 @@ end
 
 -- Credits, message is not squished up cuz it looks bad
 game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Credits to Ninja",
+	Title = "Credits to Syntax",
 	Text = "Made by @NinjaKid-k5q ( youtube & discord )",
         Icon = nil,
 	Duration = 36000,
@@ -203,7 +204,7 @@ end
 
 -- Credits, message is not squished up cuz it looks bad
 game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Credits to NinjaKid-k5q",
+	Title = "Credits to Syntax",
 	Text = "Made by @NinjaKid-k5q ( youtube & discord )",
         Icon = nil,
 	Duration = 36000,
@@ -225,7 +226,7 @@ doors = doors + 1
 end
 else
 game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Message from Ninja",
+	Title = "Message from Syntax",
 	Text = "You don't have enough slaps",
     Icon = nil,
 	Duration = 36000,
@@ -235,7 +236,7 @@ end
 
 else
 game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Message from Ninja",
+	Title = "Message from Syntax",
 	Text = "Wrong game buddy",
     Icon = nil,
 	Duration = 36000,
@@ -255,7 +256,7 @@ end
 
 -- Credits, message is not squished up cuz it looks bad
 game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Credits to Ninja Scripts",
+	Title = "Credits to Syntax",
 	Text = "Made by @NinjaKid-k5q ( youtube & discord )",
     Icon = nil,
 	Duration = 36000,
@@ -281,7 +282,7 @@ end
 local BadgeButton = BadgeTab:CreateButton({
    Name = "Get Lamp",
    Callback = function()
-print ("Getting Lamp... Make sure you have zzz equipped!")			
+print ("Getting Lamp... Make sure you have zzzzzzzzzzzz equipped!")			
 if not game.IsLoaded then
 game.Loaded:Wait()
 end
@@ -341,7 +342,7 @@ end
 
 -- Credits, message is not squished up cuz it looks bad
 game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Credits to Ninja",
+	Title = "Credits to Syntax",
 	Text = "Made by @NinjaKid-k5q ( youtube & discord )",
         Icon = nil,
 	Duration = 36000,
@@ -349,7 +350,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 })
 
 game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Message from Ninja",
+	Title = "Message from Syntax",
 	Text = "Please re-execute script after teleporting",
     Icon = nil,
 	Duration = 36000,
@@ -566,7 +567,7 @@ end
 
 -- Credits, message is not squished up cuz it looks bad
 game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Credits to Ninja",
+	Title = "Credits to Syntax",
 	Text = "Made by @NinjaKid-k5q ( youtube & discord )",
         Icon = nil,
 	Duration = 36000,
@@ -574,7 +575,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 })
 
 game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Message from Ninja",
+	Title = "Message from Syntax",
 	Text = "Please re-execute script after teleporting",
     Icon = nil,
 	Duration = 36000,
@@ -586,7 +587,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 if game.PlaceId == 136005148166028 then
 
 game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Message from Ninja",
+	Title = "Message from Syntax",
 	Text = "Please don't move and don't touch anything!",
     Icon = x,
 	Duration = 36000,
@@ -686,6 +687,49 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Message from Ninja",
 	Text = "Wrong game buddy",
     Icon = ban,
+	Duration = 36000,
+	Button1 = "Oh..."
+})
+end
+   end,
+})
+
+local BadgeButton = BadgeTab:CreateButton({
+   Name = "Get Spoonful",
+   Callback = function()
+  if not game.IsLoaded then
+game.Loaded:Wait()
+end
+
+-- Credits, message is not squished up cuz it looks bad
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Credits to Syntax",
+	Text = "Made by @NinjaKid-k5q ( youtube & discord )",
+    Icon = nil,
+	Duration = 36000,
+        Button1 = "Ok"
+})
+
+if game.PlaceId == 11520107397 or game.PlaceId == 9015014224 or game.PlaceId == 6403373529 or game.PlaceId == 124596094333302 then
+  
+if game.Players.LocalPlayer.leaderstats.Glove.Value == "Tycoon" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(17892.921875, -23.757728576660156, -3525.60986328125)
+wait(1)
+local args = {
+    [1] = CFrame.new(17892.921875, -26.257728576660156, -3535.60986328125) * CFrame.Angles(-3.424421279873968e-08, 2.6262986672020115e-14, -9.837128089884573e-08)
+}
+game:GetService("ReplicatedStorage").GeneralAbility:FireServer(unpack(args))
+wait(2)
+repeat task.wait()
+fireclickdetector(workspace["ÅTycoon"..game.Players.LocalPlayer.Name].Click.ClickDetector)
+until game:GetService("BadgeService"):UserHasBadgeAsync(game.Players.LocalPlayer.UserId, 2236076719770808)
+end
+  
+else
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Message from Syntax",
+	Text = "Wrong game buddy",
+    Icon = nil,
 	Duration = 36000,
 	Button1 = "Oh..."
 })
@@ -909,6 +953,136 @@ end
    Name = "Get All Badges (Check Inventory)",
    Callback = function()
   loadstring(game:HttpGet("https://raw.githubusercontent.com/IncognitoScripts/SlapBattles/refs/heads/main/InstantGloves"))()
+   end,
+})
+
+local BadgeButton = BadgeTab:CreateButton({
+   Name = "Getting Car Keys",
+   Callback = function()
+   print("Getting Car Keys, its instant so js sit n' wait for the glove")
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/IncognitoScripts/SlapBattles/refs/heads/main/InstantCarKeys"))()
+   end,
+})
+
+local BadgeButton = BadgeTab:CreateButton({
+   Name = "Get Bob [FIXED]",
+   Callback = function()
+if not game:IsLoaded() then
+     game.Loaded:Wait()
+end
+if  game:GetService("BadgeService"):UserHasBadgeAsync(game.Players.LocalPlayer.UserId, 2125950512) then
+     game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Nice!",Text = "Congratulations, you got bob ;)" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "OK"})
+     fireclickdetector(game:GetService("Workspace").Lobby.bob.ClickDetector)
+     return 
+end
+
+fireclickdetector(workspace.Lobby["God's Hand"].ClickDetector)
+task.wait(.3)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Lobby.Teleport1.CFrame
+wait(1)
+game:GetService("ReplicatedStorage").TimestopJump:FireServer()
+game:GetService("ReplicatedStorage").Timestopchoir:FireServer()
+game:GetService("ReplicatedStorage").Timestop:FireServer()
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+
+task.wait(8)
+fireclickdetector(game:GetService("Workspace").Lobby.Replica.ClickDetector)
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Lobby.Teleport1.CFrame
+task.wait(1)
+for i = 1, 75000 do
+        game:GetService("ReplicatedStorage").Duplicate:FireServer(unpack({[1] = true}))
+end
+wait(2)
+--[[ This script isn't mine but idk how to create one so i use this instead ]]-- 
+local AllIDs = {}
+local foundAnything = ""
+local actualHour = os.date("!*t").hour
+local Deleted = false
+local S_T = game:GetService("TeleportService")
+local S_H = game:GetService("HttpService")
+local Players = game:GetService("Players")
+
+local File = pcall(function()
+    AllIDs = S_H:JSONDecode(readfile("server-hop-temp.json"))
+end)
+if not File then
+    table.insert(AllIDs, actualHour)
+    pcall(function()
+        writefile("server-hop-temp.json", S_H:JSONEncode(AllIDs))
+    end)
+end
+
+local function TPReturner(placeId)
+    local Site
+    if foundAnything == "" then
+        Site = S_H:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. placeId .. '/servers/Public?sortOrder=Asc&limit=100'))
+    else
+        Site = S_H:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. placeId .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
+    end
+
+    local ID = ""
+    if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
+        foundAnything = Site.nextPageCursor
+    end
+
+    local num = 0
+    local foundServer = false 
+
+    for i, v in pairs(Site.data) do
+        local Possible = true
+        ID = tostring(v.id)
+        if tonumber(v.maxPlayers) > tonumber(v.playing) then
+            for _, Existing in pairs(AllIDs) do
+                if num ~= 0 then
+                    if ID == tostring(Existing) then
+                        Possible = false
+                    end
+                else
+                    if tonumber(actualHour) ~= tonumber(Existing) then
+                        local delFile = pcall(function()
+                            delfile("server-hop-temp.json")
+                            AllIDs = {}
+                            table.insert(AllIDs, actualHour)
+                        end)
+                    end
+                end
+                num = num + 1
+            end
+            if Possible == true then
+                table.insert(AllIDs, ID)
+                foundServer = true
+                wait()
+                pcall(function()
+                    writefile("server-hop-temp.json", S_H:JSONEncode(AllIDs))
+                    wait()
+                    S_T:TeleportToPlaceInstance(placeId, ID, Players.LocalPlayer)
+                end)
+                wait(4)
+            end
+        end
+    end
+
+    -- if not found server
+    if not foundServer then
+        game:GetService("TeleportService"):Teleport(game.PlaceId)
+    end
+end
+
+local module = {}
+function module:Teleport(placeId)
+    while wait() do
+        pcall(function()
+            TPReturner(placeId)
+            if foundAnything ~= "" then
+                TPReturner(placeId)
+            end
+        end)
+    end
+end
+
+
+module:Teleport(game.PlaceId)
    end,
 })
     local BadgeButton = BadgeTab:CreateButton({

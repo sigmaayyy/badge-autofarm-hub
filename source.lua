@@ -14,7 +14,7 @@ end
 
 local Window = Rayfield:CreateWindow({
    Name = "Syntax Exploits | v7.5",
-   Icon = "0", -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   Icon = nil, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Loading...",
    LoadingSubtitle = "Downloading assests...",
    Theme = "Amethyst",
@@ -755,6 +755,15 @@ local CreditsButton = CreditsTab:CreateButton({
 setclipboard("https://www.roblox.com/game-pass/1233739253/Premium")
    end,
 })
+
+local CreditsButton = CreditsTab:CreateButton({
+   Name = "Check Out Our Website! (Check Clipboard)",
+   Callback = function()
+   setclipboard("https://website-plum-phi-26.vercel.app")
+   end,
+})
+
+ local CreditsParagraph = CreditsTab:CreateParagraph({Title = "Website", Content = "Our website is labeled as 'Dangerous' even though it isn't. Just watch out for that guys."})
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 local userId = game.Players.LocalPlayer.UserId
 local whitelistedIds = {

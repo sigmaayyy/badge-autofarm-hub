@@ -768,7 +768,7 @@ local CreditsButton = CreditsTab:CreateButton({
 local userId = game.Players.LocalPlayer.UserId
 local whitelistedIds = {
     [5280006608] = true,
-    [8635080760] = true,
+    [8786966932] = true,
     [3367685856] = true,
     [8296140670] = true
 }

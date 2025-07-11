@@ -1,23 +1,11 @@
-
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
-local SlapBattlesPlaceId = 6403373529 
-local StarterGui = game:GetService("StarterGui")
-
-if game.PlaceId ~= SlapBattlesPlaceId then
-    StarterGui:SetCore("SendNotification", {
-        Title = "Wrong Game",
-        Text = "This is the wrong game, but im booting it up anyway.",
-        Duration = 5
-    })
-end
-
 local Window = Rayfield:CreateWindow({
-   Name = "Syntax Exploits | v7.5",
+   Name = "Syntax Exploits | v8.0",
    Icon = nil, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Loading...",
    LoadingSubtitle = "Downloading assests...",
-   Theme = "Amethyst",
+   Theme = "Bloom",
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
@@ -30,7 +18,7 @@ local Window = Rayfield:CreateWindow({
 
    Discord = {
       Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
-      Invite = "https://discord.gg/PfbeUhppbc", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      Invite = "PfbeUhppbc", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
 
@@ -737,6 +725,54 @@ end
    end,
 })
 
+local BadgeButton = BadgeTab:CreateButton({
+   Name = "Get Elude",
+   Callback = function()
+   print("Getting Elude. Took a while for me to make this. Took me hours to search for the elude placeid")
+if not game.IsLoaded then
+game.Loaded:Wait()
+end
+
+-- Credits, message is not squished up cuz it looks bad
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Credits to Syntax (Formerly Ninja Scripts)",
+	Text = "Made by @NinjaKid-k5q ( youtube & discord )",
+        Icon = nil,
+	Duration = 36000,
+	Button1 = "Thanks!"
+})
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Message from Syntax",
+	Text = "Please re-execute script after teleporting",
+    Icon = nil,
+	Duration = 36000,
+	Button1 = "Ok..."
+})
+
+
+if game.PlaceId == 11828384869 then
+
+while task.wait() do
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Ruins.Elude.Glove.CFrame
+end
+  
+elseif game.PlaceId == 11520107397 or game.PlaceId == 9015014224 or game.PlaceId == 6403373529 or game.PlaceId == 124596094333302 then
+  
+while task.wait() do game:GetService("TeleportService"):Teleport(11828384869) end
+
+else
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Message from Syntax",
+	Text = "This is the wrong game.",
+    Icon = nil,
+	Duration = 36000,
+	Button1 = "Oh..."
+})
+end
+   end,
+})
+
 local CreditsTab = Window:CreateTab("Credits & Get Premium", 4483362458) -- Title, Image
 
 local CreditsParagraph = CreditsTab:CreateParagraph({Title = "Premium", Content = "You are currently using the free version. Upgrade to premium to get more badges and autofarm slaps."})
@@ -966,7 +1002,7 @@ end
 })
 
 local BadgeButton = BadgeTab:CreateButton({
-   Name = "Getting Car Keys",
+   Name = "Get Car Keys",
    Callback = function()
    print("Getting Car Keys, its instant so js sit n' wait for the glove")
    loadstring(game:HttpGet("https://raw.githubusercontent.com/IncognitoScripts/SlapBattles/refs/heads/main/InstantCarKeys"))()

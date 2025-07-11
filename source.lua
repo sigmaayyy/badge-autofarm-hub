@@ -1,10 +1,10 @@
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
-local ArsenalPlaceId = 6403373529 
+local SlapBattlesPlaceId = 6403373529 
 local StarterGui = game:GetService("StarterGui")
 
-if game.PlaceId ~= ArsenalPlaceId then
+if game.PlaceId ~= SlapBattlesPlaceId then
     StarterGui:SetCore("SendNotification", {
         Title = "Wrong Game",
         Text = "This is the wrong game, but im booting it up anyway.",

@@ -1,7 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Syntax Exploits | v8.0",
+   Name = "Syntax Exploits [5 HOURS] | v8.0",
    Icon = nil, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Loading...",
    LoadingSubtitle = "Downloading assests...",
@@ -805,7 +805,6 @@ local userId = game.Players.LocalPlayer.UserId
 local whitelistedIds = {
     [5280006608] = true,
     [8786966932] = true,
-    [3367685856] = true,
     [8296140670] = true
 }
 

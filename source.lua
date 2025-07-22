@@ -1,7 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Syntax Exploits [5 HOURS] | v8.0",
+   Name = "Syntax Exploits [UPDATE] | v8.5",
    Icon = nil, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Loading...",
    LoadingSubtitle = "Downloading assests...",
@@ -773,6 +773,97 @@ end
    end,
 })
 
+local BadgeButton = BadgeTab:CreateButton({
+   Name = "Get Sword Fighter",
+   Callback = function()
+   if not game.IsLoaded then
+game.Loaded:Wait()
+end
+
+-- Credits, message is not squished up cuz it looks bad
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Credits to Syntax",
+	Text = "Made by @NinjaKid-k5q ( youtube & discord ) I know it still says Ninja Kid 💔",
+    Icon = nil,
+	Duration = 36000
+})
+
+if getgenv().AutoGetSwordfighterExecuted == true then return end
+
+if getgenv or getgenv() then
+getgenv().AutoGetSwordfighterExecuted = true
+end
+
+function ClickButton(button, size)
+    textbutton = button
+	size = size or UDim2.new(10000, 0, 10000, 0)
+    task.wait()
+    if textbutton and textbutton.ClassName == "TextButton" or textbutton.ClassName == "ImageButton" then
+        textbutton.Size = size
+        task.wait()
+        repeat task.wait() until textbutton.Size == size
+        task.wait()
+        game:GetService("VirtualUser"):CaptureController()
+        game:GetService("VirtualUser"):ClickButton1(Vector2.new())
+    end
+end
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Message from Syntax",
+	Text = "Please re-execute script after teleporting",
+    Icon = nil,
+	Duration = 36000,
+	Button1 = "Oh..."
+})
+
+
+if game.PlaceId == 117232463555132 then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Map.Components.NPCs.FinalBoss.FinalBoss.Head.CFrame * CFrame.new(0,10,0)
+task.wait(3)
+workspace.Map.Components.NPCs.FinalBoss.FinalBoss:FindFirstChildWhichIsA("Humanoid").RigType = "R15"
+workspace.Map.Components.NPCs.FinalBoss.FinalBoss:FindFirstChildWhichIsA("Humanoid").Health = 0
+repeat task.wait() until game.Players.LocalPlayer.PlayerGui.SkipButton.SkipDialogueButton.Visible == true
+task.wait()
+repeat task.wait() until game.Players.LocalPlayer.PlayerGui.SkipButton.SkipDialogueButton.Visible == false
+while task.wait() do
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Map.Components.GloveIsland.ClaimGlove.CFrame
+fireproximityprompt(workspace.Map.Components.GloveIsland.ClaimGlove:FindFirstChildWhichIsA("ProximityPrompt"))
+end
+elseif game.PlaceId == 11520107397 or game.PlaceId == 9015014224 or game.PlaceId == 6403373529 or game.PlaceId == 124596094333302 then
+for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+if v:IsA("BasePart") and v.CanCollide == true then
+v.CanCollide = false
+end
+end
+task.wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(316,40,196)
+task.wait(1)
+game.ReplicatedStorage.RetroAbility:FireServer("Ban Hammer")
+task.wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(310,34,191)
+
+else
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Message from Syntax",
+	Text = "Wrong game buddy",
+    Icon = nil,
+	Duration = 36000,
+	Button1 = "Oh..."
+})
+end
+   end,
+})
+
+local InfoTab = Window:CreateTab("Info", 4483362458) 
+
+local InfoParagraph = InfoTab:CreateParagraph({Title = "Script Version", Content = "Our version is 8.5"})
+
+local InfoParagraph = InfoTab:CreateParagraph({Title = "Build Version", Content = "9.5.7 | Build Hash: #234003284hjjf7125d"})
+
+local InfoParagraph = InfoTab:CreateParagraph({Title = "Supported Devices", Content = "Mobile and PC"})
+
+local InfoParagraph = InfoTab:CreateParagraph({Title = "Recommended Devices", Content = "PC"})
+
 local CreditsTab = Window:CreateTab("Credits & Get Premium", 4483362458) -- Title, Image
 
 local CreditsParagraph = CreditsTab:CreateParagraph({Title = "Premium", Content = "You are currently using the free version. Upgrade to premium to get more badges and autofarm slaps."})
@@ -786,9 +877,9 @@ local CreditsButton = CreditsTab:CreateButton({
     local CreditsParagraph = CreditsTab:CreateParagraph({Title = "Premium", Content = "There are hidden gloves you cannot get because you are do not own Premium."})
 
 local CreditsButton = CreditsTab:CreateButton({
-   Name = "Get Short-Time key (Check Clipboard)",
+   Name = "Get Premium (Check Clipboard)",
    Callback = function()
-setclipboard("https://www.roblox.com/game-pass/1233739253/Premium")
+setclipboard("https://website-plum-phi-26.vercel.app/#/premium")
    end,
 })
 
@@ -800,7 +891,12 @@ local CreditsButton = CreditsTab:CreateButton({
 })
 
  local CreditsParagraph = CreditsTab:CreateParagraph({Title = "Website", Content = "Our website is labeled as 'Dangerous' even though it isn't. Just watch out for that guys."})
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+ local BadgeParagraph = BadgeTab:CreateParagraph({Title = "Premium Below", Content = "Below, is the badges for the premium section."})
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
 local userId = game.Players.LocalPlayer.UserId
 local whitelistedIds = {
     [5280006608] = true,

@@ -5,7 +5,7 @@ local Window = Rayfield:CreateWindow({
    Icon = nil, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Loading...",
    LoadingSubtitle = "Downloading assests...",
-   Theme = "Bloom",
+   Theme = "Serenity",
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
@@ -17,7 +17,7 @@ local Window = Rayfield:CreateWindow({
    },
 
    Discord = {
-      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Enabled = true, -- Prompt the user to join your Discord server if their executor supports it
       Invite = "PfbeUhppbc", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
@@ -547,143 +547,7 @@ end
 })
 
 local BadgeButton = BadgeTab:CreateButton({
-   Name = "Get Metaverse",
-   Callback = function()
-   if not game.IsLoaded then
-game.Loaded:Wait()
-end
-
--- Credits, message is not squished up cuz it looks bad
-game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Credits to Syntax",
-	Text = "Made by @NinjaKid-k5q ( youtube & discord )",
-        Icon = nil,
-	Duration = 36000,
-	Button1 = "Thanks!"
-})
-
-game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Message from Syntax",
-	Text = "Please re-execute script after teleporting",
-    Icon = nil,
-	Duration = 36000,
-	Button1 = "Oh..."
-})
-
-
-
-if game.PlaceId == 136005148166028 then
-
-game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Message from Syntax",
-	Text = "Please don't move and don't touch anything!",
-    Icon = x,
-	Duration = 36000,
-	Button1 = "All i want is my badge 😭"
-})
-
-local Platform = (game.UserInputService.TouchEnabled and not game.UserInputService.MouseEnabled) and "Mobile" or "PC"
-fireclickdetector(workspace.Kitchen.Fridge.HitBox.ClickDetector)
-task.wait(1)
-fireclickdetector(workspace.Kitchen.Fridge.GrantAward.ClickDetector)
-task.wait(1)
-fireclickdetector(workspace.Microwave.HitBox.ClickDetector)
-task.wait(10)
-fireclickdetector(workspace.Microwave.HitBox.ClickDetector)
-task.wait(1)
-fireclickdetector(workspace.Microwave.Brewzucki.ClickDetector)
-task.wait()
-repeat task.wait() until game.Players.LocalPlayer.Backpack:FindFirstChild("Brewzucki")
-task.wait()
-if game.Players.LocalPlayer.Backpack:FindFirstChild("Brewzucki") then
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack["Brewzucki"])
-task.wait(1)
-game.Players.LocalPlayer.Character["Brewzucki"]:Activate()
-task.wait(2)
-game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
-if game.Players.LocalPlayer.Backpack:FindFirstChild("Brewzucki") then
-game.Players.LocalPlayer.Backpack["Brewzucki"]:Destroy()
-else
-game.Players.LocalPlayer.Character["Brewzucki"]:Destroy()
-end
-else
-game.Players.LocalPlayer.Character["Brewzucki"]:Activate()
-task.wait(2)
-game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
-if game.Players.LocalPlayer.Backpack:FindFirstChild("Brewzucki") then
-game.Players.LocalPlayer.Backpack["Brewzucki"]:Destroy()
-else
-game.Players.LocalPlayer.Character["Brewzucki"]:Destroy()
-end
-end
-task.wait(5)
-fireclickdetector(workspace.BasementTable.HitBox.ClickDetector)
-task.wait(15)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.ComputerChair.Seat.CFrame
-task.wait(5)
-local start = tick()
-while tick() - start < 30 do  
-for i,v in pairs(game.Players.LocalPlayer.PlayerGui.RealComputerScreenGui.ComputerScreen.SuggestionsQTE:GetChildren()) do
-if v and v.Name:find("Popup_") then
-v.Position = game.Players.LocalPlayer.PlayerGui.RealComputerScreenGui.ComputerScreen.SuggestionsQTE.RecyclingBin.Position
-end
-end
-task.wait()
-end
-task.wait(2)
-game:GetService("ReplicatedStorage").Remotes.ComputerState:FireServer("Victory")
-task.wait(.25)
-game:GetService("ReplicatedStorage").Remotes.ComputerState:Destroy()
-game.Players.LocalPlayer.PlayerGui.RealComputerScreenGui.Enabled = false
-game.Players.LocalPlayer.Character.Humanoid.Sit = false
-task.wait(1.5)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-14,37,49)
-task.wait(2)
-repeat task.wait()
-if Platform == "Mobile" then
-if game.Players.LocalPlayer.PlayerGui.DavidShrineQTE.DavidShrineQTE.Mobile.SpawnArea:FindFirstChild("TapLabel") then
-game.Players.LocalPlayer.PlayerGui.DavidShrineQTE.DavidShrineQTE.Mobile.SpawnArea.TapLabel.Size = UDim2.new(10000, 0, 10000, 0)
-game:GetService("VirtualUser"):CaptureController()
-game:GetService("VirtualUser"):ClickButton1(Vector2.new())
-end
-elseif Platform == "PC" then
-if game.Players.LocalPlayer.PlayerGui.DavidShrineQTE.DavidShrineQTE.PC.QuickTimeLabel.Visible == true then
-game:GetService("VirtualInputManager"):SendKeyEvent(true, game.Players.LocalPlayer.PlayerGui.DavidShrineQTE.DavidShrineQTE.PC.QuickTimeLabel.Text, false, game:GetService("VirtualInputManager"))
-end
-end
-until game.Players.LocalPlayer.PlayerGui.DavidShrineQTE.DavidShrineQTE.ScoreLabel.Text == "Score: 150"
-
-elseif game.PlaceId == 7234087065 then
-
-
-repeat task.wait() game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(250, 95, -62830) until workspace.Buildings:FindFirstChild("wizard twoer 2")
-task.wait(1.5)
-while task.wait() do
-for i,v in pairs(workspace.Buildings["wizard twoer 2"]:GetChildren()) do
-if v.Name == "Model" and v:FindFirstChild("Trigger") then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v:FindFirstChild("Trigger").CFrame
-end
-end
-end
-  
-elseif game.PlaceId == 11520107397 or game.PlaceId == 9015014224 or game.PlaceId == 6403373529 or game.PlaceId == 124596094333302 then
-  
-while task.wait() do game:GetService("TeleportService"):Teleport(7234087065) end
-
-else
-game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Message from Ninja",
-	Text = "Wrong game buddy",
-    Icon = ban,
-	Duration = 36000,
-	Button1 = "Oh..."
-})
-end
-   end,
-})
-
-local BadgeButton = BadgeTab:CreateButton({
-   Name = "Get Spoonful",
+   Name = "Get Spoonful [NEW]",
    Callback = function()
   if not game.IsLoaded then
 game.Loaded:Wait()
@@ -774,7 +638,7 @@ end
 })
 
 local BadgeButton = BadgeTab:CreateButton({
-   Name = "Get Sword Fighter",
+   Name = "Get Sword Fighter [LAST UPDATE]",
    Callback = function()
    if not game.IsLoaded then
 game.Loaded:Wait()
@@ -854,15 +718,144 @@ end
    end,
 })
 
+local BadgeButton = BadgeTab:CreateButton({
+   Name = "Get Voodoo",
+   Callback = function()
+   if not game.IsLoaded then
+game.Loaded:Wait()
+end
+
+if workspace:FindFirstChild("Baseplate") == nil then
+
+local S = Instance.new("Part")
+
+S.Name = "Baseplate"
+
+S.Anchored = true
+
+S.CanCollide = true
+
+S.Transparency = 0
+
+S.Position = Vector3.new(-10000, -10000, -10000)
+
+S.Size = Vector3.new(1000, 10, 1000)
+
+S.Parent = workspace
+
+end
+
+function EquipGlove(glove, time)
+    glove = glove or "Default"
+    time = time or 0.4
+    task.wait()
+    repeat task.wait() until game.Players.LocalPlayer and game.Players.LocalPlayer:FindFirstChild("leaderstats") and game.Players.LocalPlayer.leaderstats:FindFirstChild("Glove")   task.wait()
+
+    if workspace.Lobby:FindFirstChild(glove) and workspace.Lobby[glove]:FindFirstChildWhichIsA("ClickDetector") then
+
+        if fireclickdetector or fireclickdetector() then
+
+            fireclickdetector(workspace.Lobby[glove].ClickDetector)
+
+            repeat task.wait() until game.Players.LocalPlayer.leaderstats.Glove.Value == glove
+
+            task.wait(time)
+
+        end
+
+    end
+
+end
+
+function EnterPortal(portal, time)
+
+    portal = portal or "Teleport1"
+
+    time = time or 0.8
+
+    task.wait()
+
+    repeat task.wait() until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid") 
+
+    task.wait()
+
+    if workspace.Lobby:FindFirstChild(portal) and workspace.Lobby[portal]:FindFirstChildWhichIsA("Script") and game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("entered") == nil then
+
+        workspace.Lobby[portal].CanCollide = false
+
+        old = workspace.Lobby[portal].CFrame
+
+        workspace.Lobby[portal].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+        repeat task.wait() until game.Players.LocalPlayer.Character:FindFirstChild("entered")
+
+        workspace.Lobby[portal].CFrame = old
+
+        workspace.Lobby[portal].CanCollide = true
+
+        task.wait(time)
+
+    end
+
+end
+
+-- Credits, message is not squished up cuz it looks bad
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Credits to Syntax",
+	Text = "Made by @NinjaKid-k5q ( youtube & discord )",
+    Icon = nil,
+	Duration = 36000,
+        Button1 = "Ok"
+})
+
+if game.PlaceId == 11520107397 or game.PlaceId == 9015014224 or game.PlaceId == 6403373529 or game.PlaceId == 124596094333302 then
+
+if game.Players.LocalPlayer.Character:FindFirstChild("entered") then
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Message from Syntax",
+	Text = "Use in lobby",
+    Icon = nil,
+	Duration = 36000,
+	Button1 = "Oh..."
+})
+else
+
+EquipGlove("Ghost")
+game.ReplicatedStorage.Ghostinvisibilityactivated:FireServer()
+task.wait(.2)
+EnterPortal("Teleport1")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["Baseplate"].CFrame * CFrame.new(0,10,0)
+
+if getconnections then
+for i,v in next, getconnections(game.Players.LocalPlayer.Idled) do
+v:Disable() 
+end
+end
+
+end 
+else
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Message from Syntax",
+	Text = "Wrong game buddy",
+    Icon = nil,
+	Duration = 36000,
+	Button1 = "Oh..."
+})
+end
+   end,
+})
+
 local InfoTab = Window:CreateTab("Info", 4483362458) 
 
-local InfoParagraph = InfoTab:CreateParagraph({Title = "Script Version", Content = "Our version is 8.5"})
+local InfoParagraph = InfoTab:CreateParagraph({Title = "Script Version", Content = "Our version is 9.0"})
 
-local InfoParagraph = InfoTab:CreateParagraph({Title = "Build Version", Content = "9.5.7 | Build Hash: #234003284hjjf7125d"})
+local InfoParagraph = InfoTab:CreateParagraph({Title = "Build Version", Content = "9.5.8 | Build Hash: #138188rhgr34590"})
 
 local InfoParagraph = InfoTab:CreateParagraph({Title = "Supported Devices", Content = "Mobile and PC"})
 
 local InfoParagraph = InfoTab:CreateParagraph({Title = "Recommended Devices", Content = "PC"})
+
+local InfoParagraph = InfoTab:CreateParagraph({Title = "Badges", Content = "Most of these badges were made by me but some of these badges were from Nexer and Incognito. Huge credits to them."})
 
 local CreditsTab = Window:CreateTab("Credits & Get Premium", 4483362458) -- Title, Image
 
@@ -1228,6 +1221,141 @@ module:Teleport(game.PlaceId)
    Callback = function()
     print("This Mastery GUI wasn't made by me. This was made by Nexer and some of the badges of this script were made by Nexer.")
    loadstring(game:HttpGet("https://raw.githubusercontent.com/Pro666Pro/OpenSourceScripts/refs/heads/main/MasteryFarmGui/Source.luau"))()
+   end,
+})
+    local Button = Tab:CreateButton({
+   Name = "Get Trap [NEW]",
+   Callback = function()
+   if not game.IsLoaded then
+game.Loaded:Wait()
+end
+
+if workspace:FindFirstChild("Baseplate") == nil then
+
+local S = Instance.new("Part")
+
+S.Name = "Baseplate"
+
+S.Anchored = true
+
+S.CanCollide = true
+
+S.Transparency = 0
+
+S.Position = Vector3.new(-10000, -10000, -10000)
+
+S.Size = Vector3.new(1000, 10, 1000)
+
+S.Parent = workspace
+
+end
+
+function EquipGlove(glove, time)
+    glove = glove or "Default"
+    time = time or 0.4
+    task.wait()
+    repeat task.wait() until game.Players.LocalPlayer and game.Players.LocalPlayer:FindFirstChild("leaderstats") and game.Players.LocalPlayer.leaderstats:FindFirstChild("Glove")   task.wait()
+
+    if workspace.Lobby:FindFirstChild(glove) and workspace.Lobby[glove]:FindFirstChildWhichIsA("ClickDetector") then
+
+        if fireclickdetector or fireclickdetector() then
+
+            fireclickdetector(workspace.Lobby[glove].ClickDetector)
+
+            repeat task.wait() until game.Players.LocalPlayer.leaderstats.Glove.Value == glove
+
+            task.wait(time)
+
+        end
+
+    end
+
+end
+
+function EnterPortal(portal, time)
+
+    portal = portal or "Teleport1"
+
+    time = time or 0.8
+
+    task.wait()
+
+    repeat task.wait() until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid") 
+
+    task.wait()
+
+    if workspace.Lobby:FindFirstChild(portal) and workspace.Lobby[portal]:FindFirstChildWhichIsA("Script") and game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("entered") == nil then
+
+        workspace.Lobby[portal].CanCollide = false
+
+        old = workspace.Lobby[portal].CFrame
+
+        workspace.Lobby[portal].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+        repeat task.wait() until game.Players.LocalPlayer.Character:FindFirstChild("entered")
+
+        workspace.Lobby[portal].CFrame = old
+
+        workspace.Lobby[portal].CanCollide = true
+
+        task.wait(time)
+
+    end
+
+end
+
+-- Credits, message is not squished up cuz it looks bad
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Credits to Syntax (Formerly Ninja Kid)",
+	Text = "Made by @NinjaKid-k5q ( youtube & discord )",
+    Icon = nil,
+	Duration = 36000,
+        Button1 = "Ok"
+})
+
+if game.PlaceId == 11520107397 or game.PlaceId == 9015014224 or game.PlaceId == 6403373529 or game.PlaceId == 124596094333302 then
+
+if game.Players.LocalPlayer.Character:FindFirstChild("entered") then
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Message from Syntax",
+	Text = "Use in lobby",
+    Icon = nil,
+	Duration = 36000,
+	Button1 = "Oh..."
+})
+else
+
+EquipGlove("Brick")
+EnterPortal("Teleport1")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["Baseplate"].CFrame * CFrame.new(0,10,0)
+task.wait(1)
+if getconnections then
+for i,v in next, getconnections(game.Players.LocalPlayer.Idled) do
+v:Disable() 
+end
+end
+local Bricks = 0
+local NotifyBrick = Instance.new("Message")
+NotifyBrick.Text = "Total bricks placed: 0"
+NotifyBrick.Name = "BrickCount"
+NotifyBrick.Parent = game.CoreGui
+repeat task.wait(5)
+game:GetService("ReplicatedStorage").lbrick:FireServer()
+Bricks = Bricks + 1
+wait()
+NotifyBrick.Text = "Total bricks placed: "..Bricks
+until Bricks == 1000 or game.Players.LocalPlayer.Character.Humanoid.Health == 0
+NotifyBrick.Text = "Congrats! You got trap!"
+end 
+else
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Message from Syntax",
+	Text = "Wrong game buddy",
+    Icon = nil,
+	Duration = 36000,
+	Button1 = "Oh..."
+})
+end
    end,
 })
 else

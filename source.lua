@@ -1,7 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Syntax Exploits | v8.5",
+   Name = "Total Exploits | v8.5",
    Icon = nil, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Loading...",
    LoadingSubtitle = "Downloading assests...",
@@ -18,13 +18,13 @@ local Window = Rayfield:CreateWindow({
 
    Discord = {
       Enabled = true, -- Prompt the user to join your Discord server if their executor supports it
-      Invite = "PfbeUhppbc", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      Invite = "", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
 
    KeySystem = false, -- Set this to true to use our key system
    KeySettings = {
-      Title = "Syntax Exploits | Key System",
+      Title = "Total Exploits | Key System",
       Subtitle = "Epic Key System",
       Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
@@ -49,8 +49,8 @@ end
 
 -- Credits, message is not squished up cuz it looks bad
 game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Credits to Syntax",
-	Text = "Made by @NinjaKid-k5q ( youtube & discord )",
+	Title = "Credits to Total",
+	Text = "Made by @sigmaayyyy ( youtube & discord )",
         Icon = nil,
 	Duration = 36000,
 	Button1 = "Thanks!"
